@@ -22,4 +22,8 @@ public class JumpEvent implements Event {
     public double getTime() {
         return time;
     }
+
+    public double getHeight_m() {
+        return height_m;
+    }
 }

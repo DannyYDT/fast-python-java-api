@@ -22,4 +22,8 @@ public class SpeakEvent implements Event {
     public double getTime() {
         return time;
     }
+
+    public String getMessage() {
+        return message;
+    }
 }

@@ -8,7 +8,10 @@ public class EventManager {
     private final List<SingEventHandler> singEventHandlers = new ArrayList<>();
     private final List<JumpEventHandler> jumpEventHandlers = new ArrayList<>();
 
+    private final List<EventHandler> allHandlers = new ArrayList<>();
+
     public void addEventHandler(EventHandler handler) {
+        allHandlers.add(handler);
         if (handler instanceof SpeakEventHandler) speakEventHandlers.add((SpeakEventHandler) handler);
         if (handler instanceof SingEventHandler) singEventHandlers.add((SingEventHandler) handler);
         if (handler instanceof JumpEventHandler) jumpEventHandlers.add((JumpEventHandler) handler);
@@ -21,14 +24,10 @@ public class EventManager {
     }
 
     public void handleStartOfSimulation() {
-        speakEventHandlers.forEach(SpeakEventHandler::notifyStart);
-        singEventHandlers.forEach(SingEventHandler::notifyStart);
-        jumpEventHandlers.forEach(JumpEventHandler::notifyStart);
+        allHandlers.forEach(EventHandler::notifyStart);
     }
 
     public void handleEndOfSimulation() {
-        speakEventHandlers.forEach(SpeakEventHandler::notifyEnd);
-        singEventHandlers.forEach(SingEventHandler::notifyEnd);
-        jumpEventHandlers.forEach(JumpEventHandler::notifyEnd);
+        allHandlers.forEach(EventHandler::notifyEnd);
     }
 }
