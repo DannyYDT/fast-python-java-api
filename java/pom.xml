@@ -43,8 +43,11 @@
 							<protocArtifact>com.google.protobuf:protoc:3.0.0</protocArtifact>
 							<outputDirectory>src/main/java/</outputDirectory>
 							<inputDirectories>
-								<include>../protobuf</include>
+								<include>../</include>
 							</inputDirectories>
+							<includeDirectories>
+								<include>../</include>
+							</includeDirectories>
 						</configuration>
 					</execution>
 				</executions>

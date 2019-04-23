@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='protobuf/SpeakEvent.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x19protobuf/SpeakEvent.proto\"9\n\nSpeakEvent\x12\x0f\n\x07\x61gentId\x18\x01 \x01(\t\x12\x0c\n\x04time\x18\x02 \x01(\x01\x12\x0c\n\x04text\x18\x03 \x01(\tb\x06proto3')
+  serialized_pb=_b('\n\x19protobuf/SpeakEvent.proto\"9\n\nSpeakEvent\x12\x0f\n\x07\x61gentId\x18\x01 \x01(\t\x12\x0c\n\x04time\x18\x02 \x01(\x01\x12\x0c\n\x04text\x18\x03 \x01(\tB/\n-ch.dubernet.demopythonapi.simulation.protobufb\x06proto3')
 )
 
 
@@ -80,4 +80,6 @@ SpeakEvent = _reflection.GeneratedProtocolMessageType('SpeakEvent', (_message.Me
 _sym_db.RegisterMessage(SpeakEvent)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n-ch.dubernet.demopythonapi.simulation.protobuf'))
 # @@protoc_insertion_point(module_scope)

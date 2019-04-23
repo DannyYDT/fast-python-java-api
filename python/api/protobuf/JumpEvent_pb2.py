@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='protobuf/JumpEvent.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x18protobuf/JumpEvent.proto\"<\n\tJumpEvent\x12\x0f\n\x07\x61gentId\x18\x01 \x01(\t\x12\x0c\n\x04time\x18\x02 \x01(\x01\x12\x10\n\x08height_m\x18\x03 \x01(\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x18protobuf/JumpEvent.proto\"<\n\tJumpEvent\x12\x0f\n\x07\x61gentId\x18\x01 \x01(\t\x12\x0c\n\x04time\x18\x02 \x01(\x01\x12\x10\n\x08height_m\x18\x03 \x01(\x01\x42/\n-ch.dubernet.demopythonapi.simulation.protobufb\x06proto3')
 )
 
 
@@ -80,4 +80,6 @@ JumpEvent = _reflection.GeneratedProtocolMessageType('JumpEvent', (_message.Mess
 _sym_db.RegisterMessage(JumpEvent)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n-ch.dubernet.demopythonapi.simulation.protobuf'))
 # @@protoc_insertion_point(module_scope)

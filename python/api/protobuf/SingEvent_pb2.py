@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='protobuf/SingEvent.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x18protobuf/SingEvent.proto\"\x94\x01\n\tSingEvent\x12\x0f\n\x07\x61gentId\x18\x01 \x01(\t\x12\x0c\n\x04time\x18\x02 \x01(\x01\x12\x1d\n\x04song\x18\x03 \x01(\x0e\x32\x0f.SingEvent.Song\"I\n\x04Song\x12\x12\n\x0eOLD_MC_DONALDS\x10\x00\x12\x14\n\x10IF_YOU_ARE_HAPPY\x10\x01\x12\x17\n\x13NINETY_NINE_BOTTLES\x10\x02\x62\x06proto3')
+  serialized_pb=_b('\n\x18protobuf/SingEvent.proto\"\x94\x01\n\tSingEvent\x12\x0f\n\x07\x61gentId\x18\x01 \x01(\t\x12\x0c\n\x04time\x18\x02 \x01(\x01\x12\x1d\n\x04song\x18\x03 \x01(\x0e\x32\x0f.SingEvent.Song\"I\n\x04Song\x12\x12\n\x0eOLD_MC_DONALDS\x10\x00\x12\x14\n\x10IF_YOU_ARE_HAPPY\x10\x01\x12\x17\n\x13NINETY_NINE_BOTTLES\x10\x02\x42/\n-ch.dubernet.demopythonapi.simulation.protobufb\x06proto3')
 )
 
 
@@ -109,4 +109,6 @@ SingEvent = _reflection.GeneratedProtocolMessageType('SingEvent', (_message.Mess
 _sym_db.RegisterMessage(SingEvent)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n-ch.dubernet.demopythonapi.simulation.protobuf'))
 # @@protoc_insertion_point(module_scope)

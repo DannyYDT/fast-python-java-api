@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_package = "ch.dubernet.demopythonapi.simulation.protobuf";
+
+import "protobuf/JumpEvent.proto";
+import "protobuf/SingEvent.proto";
+import "protobuf/SpeakEvent.proto";
+
+message EventBuffer {
+    repeated EventContainer events = 1;
+}
+
+/**
+ * Acts as a kind of case class to be able to build the buffer
+ */
+message EventContainer {
+    oneof event {
+        JumpEvent jumpEvent = 1;
+        SingEvent singEvent = 2;
+        SpeakEvent speakEvent = 3;
+    }
+}
