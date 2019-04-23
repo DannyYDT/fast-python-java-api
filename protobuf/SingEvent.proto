@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "ch.dubernet.demopythonapi.simulation.protobuf";
+
+message SingEvent {
+    string agentId = 1;
+    double time = 2;
+
+    enum Song {
+        OLD_MC_DONALDS = 0;
+        IF_YOU_ARE_HAPPY = 1;
+        NINETY_NINE_BOTTLES = 2;
+    }
+
+    Song song = 3;
+}

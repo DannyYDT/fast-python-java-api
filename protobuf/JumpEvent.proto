@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "ch.dubernet.demopythonapi.simulation.protobuf";
+
+message JumpEvent {
+    string agentId = 1;
+    double time = 2;
+    double height_m = 3;
+}

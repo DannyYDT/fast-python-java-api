@@ -7,6 +7,17 @@
     <groupId>ch.dubernet</groupId>
     <artifactId>demo-python-java-api</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-java</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+	</dependencies>
+
+
     <build>
         <plugins>
             <plugin>
@@ -17,7 +28,28 @@
                     <target>8</target>
                 </configuration>
             </plugin>
-        </plugins>
+
+			<plugin>
+				<groupId>com.github.os72</groupId>
+				<artifactId>protoc-jar-maven-plugin</artifactId>
+				<version>3.7.0.2</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<protocArtifact>com.google.protobuf:protoc:3.0.0</protocArtifact>
+							<outputDirectory>src/main/java/</outputDirectory>
+							<inputDirectories>
+								<include>../protobuf</include>
+							</inputDirectories>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
     </build>
 
 
