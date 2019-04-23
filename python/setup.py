@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='demo-java-python-api',
     version='',
-    packages=[''],
+    packages=['api'],
     url='',
     license='',
     author='thibautd',
