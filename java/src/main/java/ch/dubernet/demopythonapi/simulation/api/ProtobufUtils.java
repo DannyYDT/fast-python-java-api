@@ -3,9 +3,12 @@ package ch.dubernet.demopythonapi.simulation.api;
 import ch.dubernet.demopythonapi.simulation.events.JumpEvent;
 import ch.dubernet.demopythonapi.simulation.events.SingEvent;
 import ch.dubernet.demopythonapi.simulation.events.SpeakEvent;
+import ch.dubernet.demopythonapi.simulation.protobuf.EventBufferOuterClass;
 import ch.dubernet.demopythonapi.simulation.protobuf.JumpEventOuterClass;
 import ch.dubernet.demopythonapi.simulation.protobuf.SingEventOuterClass;
 import ch.dubernet.demopythonapi.simulation.protobuf.SpeakEventOuterClass;
+
+import java.util.List;
 
 public class ProtobufUtils {
     /**
@@ -50,6 +53,33 @@ public class ProtobufUtils {
                 .setAgentId(event.getAgentId().toString())
                 .setHeightM(event.getHeight_m())
                 .setTime(event.getTime())
+                .build();
+    }
+
+    public static EventBufferOuterClass.EventContainer toEventContainer(JumpEvent event) {
+        final JumpEventOuterClass.JumpEvent pb = toProtocolBuffer(event);
+        return EventBufferOuterClass.EventContainer.newBuilder()
+                .setJumpEvent(pb)
+                .build();
+    }
+
+    public static EventBufferOuterClass.EventContainer toEventContainer(SingEvent event) {
+        final SingEventOuterClass.SingEvent pb = toProtocolBuffer(event);
+        return EventBufferOuterClass.EventContainer.newBuilder()
+                .setSingEvent(pb)
+                .build();
+    }
+
+    public static EventBufferOuterClass.EventContainer toEventContainer(SpeakEvent event) {
+        final SpeakEventOuterClass.SpeakEvent pb = toProtocolBuffer(event);
+        return EventBufferOuterClass.EventContainer.newBuilder()
+                .setSpeakEvent(pb)
+                .build();
+    }
+
+    public static EventBufferOuterClass.EventBuffer toEventBuffer(Iterable<EventBufferOuterClass.EventContainer> buffer) {
+        return EventBufferOuterClass.EventBuffer.newBuilder()
+                .addAllEvents(buffer)
                 .build();
     }
 }
