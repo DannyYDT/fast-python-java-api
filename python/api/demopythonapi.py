@@ -17,12 +17,6 @@ from api.protobuf.EventBuffer_pb2 import EventBuffer, EventContainer
 # Simple method: simply functions to wrap instances
 
 def create_event_handler(handler):
-    """
-    Annotation to annotate python classes that "implement" and event handler
-
-    :param handler:
-    :return:
-    """
     class ProtobufHandler:
         def notifyStart(self):
             if hasattr(handler, "notifyStart"):
@@ -55,12 +49,6 @@ def create_event_handler(handler):
 
 
 def create_buffered_event_handler(handler, buffer_size):
-    """
-    Annotation to annotate python classes that "implement" and event handler
-
-    :param handler:
-    :return:
-    """
     class ProtobufHandler:
         def notifyStart(self):
             if hasattr(handler, "notifyStart"):
